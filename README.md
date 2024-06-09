@@ -1,6 +1,6 @@
 # SolarVault - Solar Battery
 
-![logo](https://github.com/carforge/solarvault/assets/29213494/9ef1d83a-3947-496c-854d-47b59f99cea7|width=50)
+![logo](https://github.com/carforge/solarvault/assets/29213494/9ef1d83a-3947-496c-854d-47b59f99cea7)
 *[AI Generated with Midjourney](https://www.midjourney.com)*
 
 ### Background
