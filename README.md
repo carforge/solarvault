@@ -9,4 +9,4 @@ I use a so-called balcony power plant with an output of 600Wp on my balcony. Eve
 ### Concept
 Battery in a box, charged via a laboratory power supply which is controlled by a Raspberry Pi via a serial interface. An inverter at the output to charge laptops and cell phones. This is intended to store surplus and unremunerated electricity from the balcony power plant.
 
-Translated with DeepL.com (free version)
+Due to laziness: Translated with DeepL.com (free version)
