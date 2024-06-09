@@ -10,6 +10,6 @@ Ich betreibe Zuhause ein Balkonkraftwerk. Letztendlich nichts anderes, als eine 
 In einer mehr oder weniger portablen Kiste soll ein Lithium Akku liegen, der mit überschüssigem Solarstrom geladen werden soll. Immer wenn nun die Solaranlage mehr Strom produziert, als ich verbrauche, soll der überschüssige Strom in den Akku gespeichert werden. Dafür verwende ich einen Raspberry Pi, auf dem ein Webserver läuft und welcher per API Spannung und Strom für die Ladung einstellen kann. Dazu wird ein Netzteil mit USB Schnittstelle an dem Raspberry Pi angeschlossen.
 
 ### Bill Of Material
-1x Raspberry Pi 1 Model B
-1x Hanmatek PSU with USB interface
-1x Lithium Battery Pack (leftover of another project)
+* 1x Raspberry Pi 1 Model B
+* 1x Hanmatek PSU with USB interface
+* 1x Lithium Battery Pack (leftover of another project)
