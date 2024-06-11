@@ -1,10 +1,11 @@
 {% extends "settings/layout.html" %}
 
 {% block body %}
+    Selected: {{ selected_device }}
     <form action="{% url 'settings:index'%}" method="POST">
         {% csrf_token %}
         Select interface:
-        <select>
+        <select name="device">
             {% for device in devices %}
             <option value={{ device.device }}>{{ device.device }}</option>
             {% endfor %}
