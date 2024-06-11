@@ -5,22 +5,28 @@ Control
 {% endblock %}
 
 {% block body %}
-    <h1>PSU Control</h1>
-    {{ message }}
+    {% if message %}
+    <div class="text-danger">{{ message }}</div>
+    {% endif %}
     {% if psu != None %}
-        Connected PSU: {{ psu }}
+    <div class="text-success">
+        PSU connected: {{ psu }}
+    </div>
+    <div class="text-primary">
         <form action="{% url 'control:index' %}" method="POST">
             {% csrf_token %}
-            Voltage: <input type="number" name="voltage" step="0.1" value="{{ voltage }}"> [V]
+            <label>
+                <input type="number" name="voltage" step="0.1" value="{{ voltage }}"> [V]
+            </label>
             Current: <input type="number" name="current" step="0.01"value="{{ current }}"> [A]
             {% if output == True %}
-            Output ON: <input type="checkbox" name="psu_output" checked>
+                Output ON: <input type="checkbox" name="psu_output" checked>
             {% else %}
-            Output ON: <input type="checkbox" name="psu_output">
+                Output ON: <input type="checkbox" name="psu_output">
             {% endif %}
             <input type="submit" name="output">
-            {{ set_dict }}
         </form>
+    </div>
     {% endif %}
     <a href="{% url 'settings:index' %}"> Settings</a>
 {% endblock %}

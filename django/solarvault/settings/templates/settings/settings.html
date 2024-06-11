@@ -5,7 +5,7 @@ Settings
 {% endblock %}
 
 {% block body %}
-    <h1>Settings</h1>
+<div class="text-primary">
     <h3>Current selected interface</h3>
     {{ selected_device }}
     <h3>Change Interface</h3>
@@ -19,5 +19,5 @@ Settings
         </select>
         <input type="submit">
     </form>
-    <a href="{% url 'control:index' %}">Back</a>
+</div>
 {% endblock %}

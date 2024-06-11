@@ -35,7 +35,7 @@ def index(request):
     try:
         psu = HM3xxP(settings.MY_PSU.interface)
     except Exception:
-        message = "Failed to initialise serial port"
+        message = "Failed to initialise serial port. Go to settings."
         return render(request, "control/index.html", {
             "message": message
         })
