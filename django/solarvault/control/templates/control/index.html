@@ -1,0 +1,10 @@
+{% extends "control/layout.html" %}
+
+{% block body %}
+    {% if device is None %}
+        No device selected. Go to <a href="{% url 'settings:index' %}"> Settings Page</a>
+    {% else %}
+        {{ device }}
+        <a href="{% url 'settings:index' %}"> Settings Page</a>
+    {% endif %}
+{% endblock %}

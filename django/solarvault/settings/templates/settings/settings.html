@@ -2,7 +2,7 @@
 
 {% block body %}
     {{ selected_device }}
-    <form action="{% url 'settings:index'%}" method="POST">
+    <form action="{% url 'control:index' %}" method="POST">
         {% csrf_token %}
         Interface:
         <select name="device">
