@@ -1,0 +1,14 @@
+{% extends "settings/layout.html" %}
+
+{% block body %}
+    <form action="{% url 'settings:index'%}" method="POST">
+        {% csrf_token %}
+        Select interface:
+        <select>
+            {% for device in devices %}
+            <option value={{ device.device }}>{{ device.device }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit">
+    </form>
+{% endblock %}
