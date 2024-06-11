@@ -7,5 +7,5 @@ class psu_device:
     def __str__(self):
         return f"Selected serial interface: {self.interface}"
 
-    def mod(self, value):
+    def mod_if(self, value):
         self.interface = value
