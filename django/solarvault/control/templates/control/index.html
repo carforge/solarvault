@@ -1,10 +1,8 @@
 {% extends "control/layout.html" %}
 
 {% block body %}
-    {% if device is None %}
-        No device selected. Go to <a href="{% url 'settings:index' %}"> Settings Page</a>
-    {% else %}
-        {{ device }}
-        <a href="{% url 'settings:index' %}"> Settings Page</a>
-    {% endif %}
+    <h1>PSU Control</h1>
+    {{ message }}
+    {{ psu }} Output: {{ output }}
+    <a href="{% url 'settings:index' %}"> Settings</a>
 {% endblock %}

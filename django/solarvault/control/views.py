@@ -1,13 +1,19 @@
-from django.http import HttpResponse
+from django.conf import settings
 from django.shortcuts import render
-from common.device import psu_device
+from hanmatek import HM3xxP
+
 
 # Create your views here.
 def index(request):
-    if request.method == "POST":
-        device = psu_device(request.POST["device"])
+    try:
+        psu = HM3xxP(settings.MY_PSU.interface)
+    except Exception:
+        message = "Failed to initialise serial port"
         return render(request, "control/index.html", {
-        "device": device
+            "message": message
         })
-
-    return render(request, "control/index.html")
+    else:
+        return render(request, "control/index.html", {
+            "psu": psu.info(),
+            "output": psu.read("output")
+        })

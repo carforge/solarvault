@@ -1,8 +1,11 @@
 {% extends "settings/layout.html" %}
 
 {% block body %}
+    <h1>Settings</h1>
+    <h3>Current selected interface</h3>
     {{ selected_device }}
-    <form action="{% url 'control:index' %}" method="POST">
+    <h3>Change Interface</h3>
+    <form action="{% url 'settings:index' %}" method="POST">
         {% csrf_token %}
         Interface:
         <select name="device">
@@ -12,4 +15,5 @@
         </select>
         <input type="submit">
     </form>
+    <a href="{% url 'control:index' %}">Back</a>
 {% endblock %}
