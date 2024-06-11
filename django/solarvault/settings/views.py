@@ -10,12 +10,13 @@ import serial.tools.list_ports
 # Create your views here.
 def index(request):
     if request.method == "POST":
-        device = psu_device(request.POST["device"])
-        return render(request, "settings/settings.html", {
-            "selected_device": device
-        })
+        if not request.POST["device"] == None:
+            device = psu_device(request.POST["device"])
+            return render(request, "settings/settings.html", {
+                "selected_device": device
+            })
     
-    serial_devices = serial.tools.list_ports.comports()#serial.tools.list_ports.comports()
+    serial_devices = serial.tools.list_ports.comports()
     return render(request, "settings/settings.html", {
         "devices": serial_devices
     })
