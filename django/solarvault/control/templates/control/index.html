@@ -1,8 +1,26 @@
-{% extends "control/layout.html" %}
+{% extends "layout.html" %}
+
+{% block  title%}
+Control
+{% endblock %}
 
 {% block body %}
     <h1>PSU Control</h1>
     {{ message }}
-    {{ psu }} Output: {{ output }}
+    {% if psu != None %}
+        Connected PSU: {{ psu }}
+        <form action="{% url 'control:index' %}" method="POST">
+            {% csrf_token %}
+            Voltage: <input type="number" name="voltage" step="0.1" value="{{ voltage }}"> [V]
+            Current: <input type="number" name="current" step="0.01"value="{{ current }}"> [A]
+            {% if output == True %}
+            Output ON: <input type="checkbox" name="psu_output" checked>
+            {% else %}
+            Output ON: <input type="checkbox" name="psu_output">
+            {% endif %}
+            <input type="submit" name="output">
+            {{ set_dict }}
+        </form>
+    {% endif %}
     <a href="{% url 'settings:index' %}"> Settings</a>
 {% endblock %}

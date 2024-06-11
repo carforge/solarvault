@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from common.device import psu_device
+import os
 
 # PSU Settings globally available
 MY_PSU = psu_device()
@@ -60,7 +61,9 @@ ROOT_URLCONF = 'solarvault.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'common/layouts/common/'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
