@@ -3,6 +3,9 @@
 ![logo](https://github.com/carforge/solarvault/assets/29213494/9ef1d83a-3947-496c-854d-47b59f99cea7)
 *[AI Generator: Midjourney](https://www.midjourney.com)*
 
+### Video Demo
+[![YouTube Video Demo](https://img.youtube.com/vi/tJiyDAhUlIg/0.jpg)](https://youtu.be/tJiyDAhUlIg)
+
 ### Background [WIP]
 I run a balcony power plant at home. Ultimately, it's nothing more than a small solar system with a capacity of 600Wp (an upgrade to 800Wp is already planned). The solar power is simply fed into the grid through the socket. Even when I work from home, with my laptop and two monitors running, I often produce more electricity on sunny days than I consume. This excess electricity simply flows back into the grid and is not compensated. Admittedly, it's not much. Nevertheless, I would like to store this surplus to charge my devices like phones or laptops at night.
 
