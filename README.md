@@ -16,3 +16,6 @@ In a more or less portable box, there will be a lithium battery that is to be ch
 * 1x Raspberry Pi 1 Model B
 * 1x Hanmatek PSU with USB interface
 * 1x Lithium Battery Pack (leftover of another project)
+
+### To-Do
+* Make the current output power readable
