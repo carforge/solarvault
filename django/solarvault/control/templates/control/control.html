@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block  title%}
+Control
+{% endblock %}
+
+{% block body %}
+    {% if message %}
+    <div class="text-danger">{{ message }}</div>
+    {% endif %}
+    
+    <div class="text-success">{{ interface }}</div>
+    <div class="text-success">{{ voltage }}</div>    
+    <div class="text-success">{{ current }}</div>
+    <div class="text-success">{{ output }}</div>
+{% endblock %}
