@@ -1,30 +1,50 @@
 {% extends "layout.html" %}
 
-{% block  title%}
+{% block title %}
 Settings
 {% endblock %}
 
 {% block body %}
-<div class="text-primary">
-    <h3>Change Interface</h3>        
+<div class="container mt-5 text-primary">
+    <h3>PSU Control Settings</h3>
     <form action="{% url 'control:index' %}" method="get">
-        <label for="if">Interface:</label>
-        <select id="if" name="if">
-            {% for device in devices %}
-                <option value="{{ device.device }}">{{ device.device }}</option>
-            {% endfor %}
-        </select><br>
-        <label for="v">Voltage:</label>
-        <input type="number" id="v" name="v" required min="0" max="30" step="0.1"><br>
-        <label for="c">Current:</label>
-        <input type="number" id="c" name="c" required min="0" max="5" step="0.01"><br>
-        <label for="o">Output:</label>
-        <select name="o" id="o">
-            <option value="True">ON</option>
-            <option value="False">OFF</option>
-        </select><br>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="if">Interface:</label>
+                <select id="if" name="if" class="form-control">
+                    {% for device in devices %}
+                        <option value="{{ device.device }}">{{ device.device }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="v">Voltage:</label>
+                <input type="number" id="v" name="v" class="form-control" required min="0" max="30" step="0.1">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="c">Current:</label>
+                <input type="number" id="c" name="c" class="form-control" required min="0" max="5" step="0.01">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="o">Output:</label>
+                <select name="o" id="o" class="form-control">
+                    <option value="True">ON</option>
+                    <option value="False">OFF</option>
+                </select>
+            </div>
+        </div>
+
         {% csrf_token %}
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 {% endblock %}

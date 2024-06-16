@@ -5,12 +5,16 @@ Control
 {% endblock %}
 
 {% block body %}
-    {% if message %}
-    <div class="text-danger">{{ message }}</div>
-    {% endif %}
-    
-    <div class="text-success">{{ interface }}</div>
-    <div class="text-success">{{ voltage }}</div>    
-    <div class="text-success">{{ current }}</div>
-    <div class="text-success">{{ output }}</div>
+    <div class="container mt-5 text-primary">
+        <div class="row">
+            <div class="col-md-6">
+                {% if message %}
+                <div class="text-warning">{{ message }}</div>
+                {% endif %}
+                <div class="text-success">{{ interface }}</div>
+                <div class="text-success">{{ voltage }}</div>    
+                <div class="text-success">{{ current }}</div>
+                <div class="text-success">{{ output }}</div>
+            </div>
+        </div>
 {% endblock %}

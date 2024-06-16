@@ -56,7 +56,7 @@ def psu_control(request):
                 "output": f"Output ON: {output}"
             })
     else:
-        message = "Nothing specified. Go to settings or use settings paramters in URL."
+        message = "No PSU defined. Go to settings or use settings paramters in URL."
         return render(request, "control/control.html", {
             "message": message
         })
